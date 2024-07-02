@@ -1,0 +1,16 @@
+###
+
+### Upload logo.png to S3
+POST http://localhost:8080/s3/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="logo.png"
+Content-Type: image/png
+
+< /Like_Lion_BE10/workspace/Cloud/image/logo.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### deltete logo.png to S3
+DELETE http://localhost:8080/s3/delete/e1c74550-7e6b-4ffc-91a4-6a465a58098b
+Content-Type: application/json

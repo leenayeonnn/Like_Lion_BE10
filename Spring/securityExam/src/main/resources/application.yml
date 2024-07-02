@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: securityexam
+
+  #    security:
+  #      user:
+  #        name: user
+  #        password: 1234
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Iv23liAdB2LdMg1Yspev
+            client-secret: cf86a6f8a6c78a99bf205e6a9685da5bbeae2c27
+            scope:
+              - email
+              - profile
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            client-name: GitHub
+        provider:
+          github:
+            authorization-uri: https://github.com/login/oauth/authorize
+            token-uri: https://github.com/login/oauth/access_token
+            user-info-uri: https://api.github.com/user
+            user-name-attribute: id
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/newDB
+    username: skdus
+    password: skdus1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+jwt:
+  secretKey: 12345678901234567890123456789012
+  refreshKey: 12345678901234567890123456789012

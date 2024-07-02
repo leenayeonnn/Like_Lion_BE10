@@ -1,0 +1,23 @@
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "skdus",
+  "password": "1234"
+}
+
+###
+GET http://localhost:8080/api/authtest
+Cookie: accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJza2R1c0BlbWFpbC5jb20iLCJ1c2VybmFtZSI6InNrZHVzIiwibmFtZSI6InNrZHVzIiwidXNlcklkIjo3LCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTcxOTg5NTg1MywiZXhwIjoxNzE5ODk3NjUzfQ.e0gjFnTIJnLP0KcTfmv1hVjGbzY2S_KQq_dArGKaov0
+
+###
+# @no-cookie-jar
+GET http://localhost:8080/api/authtest
+
+###
+POST http://localhost:8080/refreshToken
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJza2R1c0BlbWFpbC5jb20iLCJ1c2VybmFtZSI6InNrZHVzIiwibmFtZSI6InNrZHVzIiwidXNlcklkIjo3LCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTcxOTg5NTg1MywiZXhwIjoxNzIwNTAwNjUzfQ.0vdWtTYT0ie6DZGOToLDD2ZGjvgHjNL4BhVCrwGdrKA
+
+###
+GET http://localhost:8080/welcome
+Cookie: accessToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJza2R1c0BlbWFpbC5jb20iLCJ1c2VybmFtZSI6InNrZHVzIiwibmFtZSI6InNrZHVzIiwidXNlcklkIjo3LCJyb2xlcyI6WyJVU0VSIl0sImlhdCI6MTcxOTg5NzExMSwiZXhwIjoxNzE5ODk4OTExfQ.CTHSqmWsVOazzLviXJql37Bjw6TS4Yi-qqRTyITcM58
